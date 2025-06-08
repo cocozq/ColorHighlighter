@@ -47,12 +47,12 @@ class ColorCtorParser : ColorParser {
       if (params < 1 || params > 4) return null
 
       return when (params) {
-        1    -> {// single hex int
+        1    -> { // single hex int
           val hex = parseComponent(getNextNumber(tokenizer)) as Int
           Color(hex)
         }
 
-        2    -> {// hex int followed with hasAlpha
+        2    -> { // hex int followed with hasAlpha
           val hex = parseComponent(getNextNumber(tokenizer)) as Int
           val hasAlpha = parseComponent(getNextNumber(tokenizer)) as Boolean
           Color(hex, hasAlpha)
@@ -62,7 +62,4 @@ class ColorCtorParser : ColorParser {
       }
     }
   }
-
 }
-
-

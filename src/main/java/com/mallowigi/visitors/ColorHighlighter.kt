@@ -38,7 +38,8 @@ import com.mallowigi.highlighters.HighlighterStyleFactory
 import java.awt.Color
 
 internal object ColorHighlighter {
-  private val COLOR_ELEMENT: HighlightInfoType = HighlightInfoTypeImpl(HighlightSeverity.INFORMATION, DefaultLanguageHighlighterColors.CONSTANT)
+  private val COLOR_ELEMENT: HighlightInfoType =
+    HighlightInfoTypeImpl(HighlightSeverity.INFORMATION, DefaultLanguageHighlighterColors.CONSTANT)
 
   fun highlightColor(element: PsiElement?, color: Color): HighlightInfo? = getHighlightInfoBuilder(color).range(element!!).create()
 

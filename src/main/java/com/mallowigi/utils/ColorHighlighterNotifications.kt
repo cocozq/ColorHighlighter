@@ -168,5 +168,4 @@ object ColorHighlighterNotifications {
       }
     }
   }
-
 }

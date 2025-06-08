@@ -1,0 +1,15 @@
+{
+  "ThemeName": "ARGB Color Test",
+  "FontColor": "0x00FFFFFF",
+  "RingBgColor": "0xFFAB9EF1",
+  "CandiBgColor": "0xFFC5C7D9",
+  "ArrowColor": "0xFF757575",
+  "ComposeFontColor": "0xFFFF4081",
+  "ComposeBgColor": "0xE6ECEFF1",
+  "TransparentRed": "0x80FF0000",
+  "SemiTransparentBlue": "0xCC0000FF",
+  "FullyTransparent": "0x00FFFFFF",
+  "StatusBarStyle": true,
+  "IconHidden": false,
+  "CandiHeight": 72
+}

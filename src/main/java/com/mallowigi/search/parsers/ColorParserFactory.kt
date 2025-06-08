@@ -70,5 +70,4 @@ object ColorParserFactory {
       else -> NoParser()
     }
   }
-
 }

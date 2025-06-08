@@ -78,7 +78,6 @@ class ColorHighlighterConfigurable : BoundSearchableConfigurable(
     lateinit var enabledCheckbox: JBCheckBox
     val arrowsRenderer = arrowsRenderer()
 
-
     main = panel {
       group(message("ColorHighlighterSettingsForm.globalSeparator.text")) {
         row {
@@ -119,7 +118,6 @@ class ColorHighlighterConfigurable : BoundSearchableConfigurable(
             .gap(RightGap.SMALL)
             .component
         }.rowComment(message("ColorHighlighterSettingsForm.tupleDetectCheckbox.toolTipText"))
-
 
         row {
           icon(ANDROID_ICON)
@@ -250,7 +248,6 @@ class ColorHighlighterConfigurable : BoundSearchableConfigurable(
             .gap(RightGap.SMALL)
             .component
         }.rowComment(message("ColorHighlighterSettingsForm.colorRustCheckbox.toolTipText"))
-
       }
 
       riderPanel = collapsibleGroup(message("ColorHighlighterSettingsForm.riderSeparator.text")) {
@@ -361,4 +358,3 @@ class ColorHighlighterConfigurable : BoundSearchableConfigurable(
     const val ID = "com.mallowigi.config.home.ColorHighlighterConfigurable"
   }
 }
-

@@ -53,5 +53,4 @@ class CustomColorsTableItemEditor : DialogItemEditor<SingleColor> {
   override fun isEditable(item: SingleColor): Boolean = !item.isEmpty
 
   override fun isEmpty(item: SingleColor): Boolean = item.isEmpty
-
 }

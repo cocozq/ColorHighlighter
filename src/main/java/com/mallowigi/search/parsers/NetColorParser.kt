@@ -41,7 +41,4 @@ class NetColorParser : ColorParser {
       return RGBColorParser().parseRGB(text)
     }
   }
-
 }
-
-

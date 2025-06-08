@@ -77,5 +77,4 @@ class CustomColors : Serializable {
   private fun has(name: String): Boolean = customColors.containsKey(name)
 
   private fun values(): List<SingleColor> = customColors.values.toList()
-
 }

@@ -78,4 +78,3 @@ class ColorEditableColumnInfo(private val parent: Disposable) :
 
   override fun isCellEditable(item: SingleColor?): Boolean = false
 }
-

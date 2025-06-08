@@ -37,7 +37,6 @@ class CopyNSColorHsba(override val color: Color?) : CopyColorAction(ColorHighlig
 
     val (h, s, b) = hsl
 
-    return "[NSColor colorWithHue:${h} saturation:${s} brightness:${b} alpha:${newColor.alpha}]"
+    return "[NSColor colorWithHue:$h saturation:$s brightness:$b alpha:${newColor.alpha}]"
   }
-
 }

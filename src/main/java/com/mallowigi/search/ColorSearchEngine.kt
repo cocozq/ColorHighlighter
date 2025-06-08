@@ -107,6 +107,4 @@ object ColorSearchEngine {
   } catch (e: RuntimeException) {
     null
   }
-
 }
-

@@ -48,5 +48,4 @@ class GutterColorLineMarkerProvider : LineMarkerProviderDescriptor() {
 
     fun isEnabled(): Boolean = LineMarkerSettings.getSettings().isEnabled(INSTANCE)
   }
-
 }

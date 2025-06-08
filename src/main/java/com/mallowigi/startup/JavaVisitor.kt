@@ -32,5 +32,4 @@ class JavaVisitor : AppLifecycleListener {
   override fun appFrameCreated(commandLineArgs: MutableList<String>) {
     FeatureLoader.instance.isJavaEnabled = true
   }
-
 }

@@ -48,7 +48,15 @@ class HexColorParser internal constructor(prefix: String) : ColorParser {
   private fun parseHex(text: String): Color? =
     when (text.length) {
       3 + offset -> ColorUtils.getShortRGB(text.substring(offset)) // RGB
-      8 + offset -> ColorUtils.getRGBA(text.substring(offset)) // RRGGBBAA
+      8 + offset -> {
+        // For 0x prefix, treat as ARGB format (common in Android/Kotlin)
+        // For # prefix or no prefix, use the configurable RGBA/ARGB logic
+        if (text.startsWith("0x") || text.startsWith("0X")) {
+          ColorUtils.getARGB(text.substring(offset)) // ARGB format
+        } else {
+          ColorUtils.getRGBA(text.substring(offset)) // RRGGBBAA or AARRGGBB based on config
+        }
+      }
       6 + offset -> ColorUtils.getRGB(text.substring(offset)) // RRGGBB
       else -> null
     }

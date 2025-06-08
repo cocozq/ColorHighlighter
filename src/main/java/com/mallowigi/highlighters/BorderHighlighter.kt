@@ -41,6 +41,7 @@ class BorderHighlighter : Highlighter {
     return TextAttributes.fromFlyweight(
       attributes.flyweight
         .withEffectType(EffectType.BOXED)
-        .withEffectColor(mix))
+        .withEffectColor(mix)
+    )
   }
 }

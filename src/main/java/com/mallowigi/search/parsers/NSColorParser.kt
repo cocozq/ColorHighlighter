@@ -71,7 +71,4 @@ class NSColorParser : ColorParser {
       return Color.getHSBColor(hue, sat, bri)
     }
   }
-
 }
-
-

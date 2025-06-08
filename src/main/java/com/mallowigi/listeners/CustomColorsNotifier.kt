@@ -38,5 +38,4 @@ fun interface CustomColorsNotifier {
     @JvmField
     val TOPIC: Topic<CustomColorsNotifier> = Topic.create("Custom Colors", CustomColorsNotifier::class.java)
   }
-
 }

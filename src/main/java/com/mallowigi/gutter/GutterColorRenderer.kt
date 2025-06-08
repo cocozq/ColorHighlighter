@@ -87,7 +87,11 @@ class GutterColorRenderer(private val color: Color?) : GutterIconRenderer() {
         val editor = e.getData(CommonDataKeys.EDITOR) ?: return
         val currentColor = color ?: return
         val newColor = ColorChooserService.instance.showDialog(
-          editor.project, editor.component, message("replace.color"), currentColor, false
+          editor.project,
+          editor.component,
+          message("replace.color"),
+          currentColor,
+          false
         )
         copyColor(currentColor, newColor)
       }

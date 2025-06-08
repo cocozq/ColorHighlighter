@@ -44,7 +44,8 @@ import java.util.*
   storages = [Storage("color-highlighter.xml")],
   category = SettingsCategory.UI
 )
-class CustomColorsConfig : PersistentStateComponent<CustomColorsConfig>,
+class CustomColorsConfig :
+  PersistentStateComponent<CustomColorsConfig>,
   SettingsConfig<CustomColorsForm, CustomColorsConfig> {
   @Property
   var customColors: CustomColors = CustomColors()
@@ -77,5 +78,4 @@ class CustomColorsConfig : PersistentStateComponent<CustomColorsConfig>,
     val instance: CustomColorsConfig
       get() = ApplicationManager.getApplication().getService(CustomColorsConfig::class.java)
   }
-
 }

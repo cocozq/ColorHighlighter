@@ -36,10 +36,19 @@ private const val BUNDLE: @NonNls String = "messages.ColorHighlighterBundle"
 object ColorHighlighterBundle : DynamicBundle(BUNDLE) {
 
   @JvmStatic
-  fun message(key: @PropertyKey(resourceBundle = BUNDLE) String, vararg params: Any?): String = getMessage(key, *params)
+  fun message(
+    key:
+    @PropertyKey(resourceBundle = BUNDLE)
+    String,
+    vararg params: Any?
+  ): String = getMessage(key, *params)
 
   @JvmStatic
-  fun messagePointer(key: @PropertyKey(resourceBundle = BUNDLE) String, vararg params: Any?): Supplier<String> =
+  fun messagePointer(
+    key:
+    @PropertyKey(resourceBundle = BUNDLE)
+    String,
+    vararg params: Any?
+  ): Supplier<String> =
     getLazyMessage(key, *params)
-
 }

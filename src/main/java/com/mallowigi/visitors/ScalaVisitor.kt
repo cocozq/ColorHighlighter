@@ -90,5 +90,4 @@ class ScalaVisitor : ColorVisitor() {
     }
     return null
   }
-
 }

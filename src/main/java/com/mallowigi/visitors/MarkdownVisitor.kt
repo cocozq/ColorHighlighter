@@ -56,5 +56,4 @@ class MarkdownVisitor : ColorVisitor() {
 
     return ColorSearchEngine.getColor(value, this)
   }
-
 }

@@ -32,5 +32,4 @@ class RustVisitor : AppLifecycleListener {
   override fun appFrameCreated(commandLineArgs: MutableList<String>) {
     FeatureLoader.instance.isRustEnabled = true
   }
-
 }

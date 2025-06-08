@@ -40,15 +40,21 @@ abstract class ColorInlineInlayProvider : InlayHintsProvider<NoSettings> {
   override val name: String = "Inline Color"
   override val key: SettingsKey<NoSettings> = SettingsKey("inline.color")
   override val previewText: String? = null
-  override fun isLanguageSupported(language: Language): Boolean = ColorHighlighterState.instance.highlightingStyle == HighlightingStyles.INLINE
+  override fun isLanguageSupported(
+    language: Language
+  ): Boolean = ColorHighlighterState.instance.highlightingStyle == HighlightingStyles.INLINE
   override fun createConfigurable(settings: NoSettings): ImmediateConfigurable = object : ImmediateConfigurable {
     override fun createComponent(listener: ChangeListener): JComponent = panel {}
   }
 
   override fun createSettings(): NoSettings = NoSettings()
-  override fun getCollectorFor(file: PsiFile, editor: Editor, settings: NoSettings, sink: InlayHintsSink): InlayHintsCollector =
+  override fun getCollectorFor(
+    file: PsiFile,
+    editor: Editor,
+    settings: NoSettings,
+    sink: InlayHintsSink
+  ): InlayHintsCollector =
     getCollector(editor)
 
   abstract fun getCollector(editor: Editor): InlayHintsCollector
-
 }

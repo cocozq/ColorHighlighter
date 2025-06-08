@@ -67,5 +67,4 @@ object ColorHighlighterIcons {
   object Other {
     val INLINE = load("icons/other/inline.svg")
   }
-
 }

@@ -28,7 +28,6 @@ package com.mallowigi.inlay
 import com.intellij.codeInsight.hints.InlayHintsCollector
 import com.intellij.openapi.editor.Editor
 import com.mallowigi.visitors.AppCodeVisitor
-import com.mallowigi.visitors.JSVisitor
 
 class AppCodeInlineInlayProvider : ColorInlineInlayProvider() {
   @Suppress("UnstableApiUsage")

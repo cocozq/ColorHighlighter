@@ -32,5 +32,4 @@ class ScalaVisitor : AppLifecycleListener {
   override fun appFrameCreated(commandLineArgs: MutableList<String>) {
     FeatureLoader.instance.isScalaEnabled = true
   }
-
 }

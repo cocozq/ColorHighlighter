@@ -39,6 +39,7 @@ class ForegroundHighlighter : Highlighter {
 
     return TextAttributes.fromFlyweight(
       attributes.flyweight
-        .withForeground(mix))
+        .withForeground(mix)
+    )
   }
 }

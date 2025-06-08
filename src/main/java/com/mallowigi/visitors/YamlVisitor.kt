@@ -49,5 +49,4 @@ class YamlVisitor : ColorVisitor() {
     val value = element.text
     return ColorSearchEngine.getColor(value, this)
   }
-
 }

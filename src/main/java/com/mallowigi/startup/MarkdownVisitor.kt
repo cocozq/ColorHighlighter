@@ -32,5 +32,4 @@ class MarkdownVisitor : AppLifecycleListener {
   override fun appFrameCreated(commandLineArgs: MutableList<String>) {
     FeatureLoader.instance.isMarkdownEnabled = true
   }
-
 }

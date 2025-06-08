@@ -116,6 +116,7 @@ object ColorUtils {
 
     return Color(red, green, blue, alpha)
   }
+
   /** Parse rgb in the hex format #123456. */
   fun getRGB(hex: String): Color {
     val rgb = normalizeRGB(hex, 6)
@@ -141,6 +142,12 @@ object ColorUtils {
     }
   }
 
+  /** Parse ARGB color format specifically (Alpha-Red-Green-Blue) */
+  fun getARGB(hex: String): Color {
+    val rgb = normalizeRGB(hex, 8)
+    return getArgb(rgb)
+  }
+
   /** Parse rgb in the hex format #123. */
   fun getShortRGB(hex: String): Color {
     val rgb = normalizeRGB(hex, 3)
@@ -155,20 +162,24 @@ object ColorUtils {
   fun toHSL(color: Color): String {
     val hsl = FloatArray(3)
     RGBtoHSL(color.red, color.green, color.blue, hsl)
-    return String.format("hsl(%d, %d%%, %d%%)",
+    return String.format(
+      "hsl(%d, %d%%, %d%%)",
       (hsl[0] * 100).roundToLong(),
       (hsl[1] * 100).roundToLong(),
-      (hsl[2] * 100).roundToLong())
+      (hsl[2] * 100).roundToLong()
+    )
   }
 
   fun toHSLA(color: Color): String {
     val hsl = FloatArray(3)
     RGBtoHSL(color.red, color.green, color.blue, hsl)
-    return String.format("hsl(%d, %d%%, %d%%, %d)",
+    return String.format(
+      "hsl(%d, %d%%, %d%%, %d)",
       (hsl[0] * 100).roundToLong(),
       (hsl[1] * 100).roundToLong(),
       (hsl[2] * 100).roundToLong(),
-      color.alpha / 255)
+      color.alpha / 255
+    )
   }
 
   fun toHex(color: Color?): String = ColorUtil.toHex(color!!)
@@ -256,9 +267,11 @@ object ColorUtils {
     val b = rgb.substring(6, 8).toInt(16)
 
     return try {
-      Color(r, g, b, a)
+      // For ARGB format, alpha should be normalized to 0.0-1.0 range
+      val normalizedAlpha = a / 255.0f
+      Color(r / 255.0f, g / 255.0f, b / 255.0f, normalizedAlpha)
     } catch (e: Exception) {
-      Color(a, r, g)
+      Color(r, g, b)
     }
   }
 
@@ -269,9 +282,11 @@ object ColorUtils {
     val a = rgb.substring(6, 8).toInt(16)
 
     return try {
-      Color(r, g, b, a)
+      // For RGBA format, alpha should be normalized to 0.0-1.0 range
+      val normalizedAlpha = a / 255.0f
+      Color(r / 255.0f, g / 255.0f, b / 255.0f, normalizedAlpha)
     } catch (e: Exception) {
-      Color(a, r, g)
+      Color(r, g, b)
     }
   }
 
@@ -302,5 +317,4 @@ object ColorUtils {
 
   /** Converts to decimal. */
   private fun toDecimal(f: Float): Int = (f * 255.0f + 0.5f).toInt()
-
 }

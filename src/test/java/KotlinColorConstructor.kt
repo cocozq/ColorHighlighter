@@ -31,10 +31,6 @@ enum class ThemeColor {
   BLUE
 }
 
-
-
-
-
 class KotlinColorConstructor {
   var ALICEBLUE = Color(240, 248, 255)
   var ALIZARIN = Color(231, 76, 60)

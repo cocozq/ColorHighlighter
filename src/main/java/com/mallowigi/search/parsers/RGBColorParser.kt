@@ -72,10 +72,6 @@ class RGBColorParser : ColorParser {
           params == 3 -> ColorUtils.getFloatRGBa(floatComponents[0], floatComponents[1], floatComponents[2], 1f)
           else -> ColorUtils.getFloatRGBa(floatComponents[0], floatComponents[1], floatComponents[2], asFloat(components[3]))        }
       }
-
     }
-
   }
-
 }
-

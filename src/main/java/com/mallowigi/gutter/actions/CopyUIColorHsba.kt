@@ -36,7 +36,6 @@ class CopyUIColorHsba(override val color: Color?) : CopyColorAction(ColorHighlig
     ColorUtils.RGBtoHSL(newColor.red, newColor.green, newColor.blue, hsl)
     val (h, s, b) = hsl
 
-    return "[UIColor colorWithHue:${h} saturation:${s} brightness:${b} alpha:${newColor.alpha}]"
+    return "[UIColor colorWithHue:$h saturation:$s brightness:$b alpha:${newColor.alpha}]"
   }
-
 }

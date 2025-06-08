@@ -32,5 +32,4 @@ import java.awt.Color
 
 class CopyHslAction(override val color: Color?) : CopyColorAction(ColorHighlighterBundle.message("actions.copyHsl"), color) {
   override fun colorFormat(newColor: Color): String = ColorUtils.toHSL(newColor)
-
 }

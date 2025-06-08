@@ -105,6 +105,4 @@ class DartVisitor : ColorVisitor() {
       if (result == null) element.acceptChildren(this) else return
     }
   }
-
 }
-

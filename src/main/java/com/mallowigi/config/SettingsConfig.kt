@@ -36,5 +36,4 @@ interface SettingsConfig<
   fun fireChanged()
 
   fun resetSettings()
-
 }

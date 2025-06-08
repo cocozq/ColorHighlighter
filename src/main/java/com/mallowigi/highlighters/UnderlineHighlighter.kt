@@ -41,6 +41,7 @@ class UnderlineHighlighter : Highlighter {
     return TextAttributes.fromFlyweight(
       attributes.flyweight
         .withEffectType(EffectType.BOLD_DOTTED_LINE)
-        .withEffectColor(mix))
+        .withEffectColor(mix)
+    )
   }
 }

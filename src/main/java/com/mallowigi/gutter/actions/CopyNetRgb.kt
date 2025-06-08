@@ -32,5 +32,4 @@ import java.awt.Color
 class CopyNetRgb(override val color: Color?) : CopyColorAction(ColorHighlighterBundle.message("actions.copyNetRgb"), color) {
   override fun colorFormat(newColor: Color): String =
     "Color.FromRgb(${newColor.red},${newColor.green},${newColor.blue})"
-
 }

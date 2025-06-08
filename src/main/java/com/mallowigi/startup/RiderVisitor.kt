@@ -32,6 +32,4 @@ class RiderVisitor : AppLifecycleListener {
   override fun appFrameCreated(commandLineArgs: MutableList<String>) {
     FeatureLoader.instance.isRiderEnabled = true
   }
-
 }
-

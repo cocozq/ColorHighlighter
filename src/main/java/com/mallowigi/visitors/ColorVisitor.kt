@@ -71,10 +71,12 @@ abstract class ColorVisitor : HighlightVisitor, LangVisitor, DumbAware {
    * @param action action to run
    * @return
    */
-  override fun analyze(file: PsiFile,
-                       updateWholeFile: Boolean,
-                       holder: HighlightInfoHolder,
-                       action: Runnable): Boolean {
+  override fun analyze(
+    file: PsiFile,
+    updateWholeFile: Boolean,
+    holder: HighlightInfoHolder,
+    action: Runnable
+  ): Boolean {
     highlightInfoHolder = holder
     try {
       action.run()
@@ -103,5 +105,4 @@ abstract class ColorVisitor : HighlightVisitor, LangVisitor, DumbAware {
   override fun shouldVisit(): Boolean = true
 
   override fun accept(element: PsiElement): Color? = null
-
 }

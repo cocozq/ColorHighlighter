@@ -56,6 +56,4 @@ class HSLColorParser : ColorParser {
       return ColorUtils.getHSLa(hue.toInt(), sat.toInt(), lum.toInt(), alpha)
     }
   }
-
 }
-

@@ -32,5 +32,4 @@ import java.awt.Color
 class CopyKotlinRgb(override val color: Color?) : CopyColorAction(ColorHighlighterBundle.message("actions.copyKotlinRgb"), color) {
   override fun colorFormat(newColor: Color): String =
     "Color(${newColor.red},${newColor.green},${newColor.blue})"
-
 }

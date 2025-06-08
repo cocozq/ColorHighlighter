@@ -32,5 +32,4 @@ class KotlinVisitor : AppLifecycleListener {
   override fun appFrameCreated(commandLineArgs: MutableList<String>) {
     FeatureLoader.instance.isKotlinEnabled = true
   }
-
 }

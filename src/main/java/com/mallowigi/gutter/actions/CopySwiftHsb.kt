@@ -36,7 +36,6 @@ class CopySwiftHsb(override val color: Color?) : CopyColorAction(ColorHighlighte
     ColorUtils.RGBtoHSL(newColor.red, newColor.green, newColor.blue, hsl)
     val (h, s, b) = hsl
 
-    return "NSColor(hue: ${h}, saturation: ${s}, brightness: ${b})"
+    return "NSColor(hue: $h, saturation: $s, brightness: $b)"
   }
-
 }

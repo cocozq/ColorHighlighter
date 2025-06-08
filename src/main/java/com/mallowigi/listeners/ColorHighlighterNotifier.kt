@@ -38,5 +38,4 @@ fun interface ColorHighlighterNotifier {
     @JvmField
     val TOPIC: Topic<ColorHighlighterNotifier> = Topic.create("Color Highlighter", ColorHighlighterNotifier::class.java)
   }
-
 }

@@ -32,5 +32,4 @@ import java.awt.Color
 class CopyAndroidRgb(override val color: Color?) : CopyColorAction(ColorHighlighterBundle.message("actions.copyAndroidRgb"), color) {
   override fun colorFormat(newColor: Color): String =
     "Color.rgb(${newColor.red},${newColor.green},${newColor.blue})"
-
 }

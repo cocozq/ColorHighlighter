@@ -46,5 +46,4 @@ class PhpVisitor : ColorVisitor() {
     val value = element.contents
     return ColorSearchEngine.getColor(value, this)
   }
-
 }

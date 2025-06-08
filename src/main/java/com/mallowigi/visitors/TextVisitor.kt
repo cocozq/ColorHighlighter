@@ -65,5 +65,4 @@ class TextVisitor : ColorVisitor() {
     val color = ColorSearchEngine.getColor(text, this)
     color?.let { highlight(it, range) }
   }
-
 }

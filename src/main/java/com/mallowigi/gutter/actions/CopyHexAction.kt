@@ -32,5 +32,4 @@ import java.awt.Color
 
 class CopyHexAction(override val color: Color?) : CopyColorAction(ColorHighlighterBundle.message("actions.copyHex"), color) {
   override fun colorFormat(newColor: Color): String = ColorUtils.toHex(newColor)
-
 }

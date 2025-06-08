@@ -45,5 +45,5 @@ enum class HighlightingStyles(
   UNDERLINE(message("HighlightingStyles.underline"), UNDERLINE_ICON),
   FOREGROUND(message("HighlightingStyles.foreground"), FOREGROUND_ICON),
   INLINE(message("HighlightingStyles.inline"), INLINE_ICON),
-  DISABLED(message("HighlightingStyles.disabled"), DISABLED_ICON);
+  DISABLED(message("HighlightingStyles.disabled"), DISABLED_ICON)
 }

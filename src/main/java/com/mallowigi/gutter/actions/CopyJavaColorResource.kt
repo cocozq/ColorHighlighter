@@ -33,7 +33,6 @@ import java.awt.Color
 class CopyJavaColorResource(override val color: Color?) : CopyColorAction(ColorHighlighterBundle.message("actions.copyJavaResource"), color) {
   override fun colorFormat(newColor: Color): String {
     val toHex = ColorUtil.toHex(newColor)
-    return "new ColorUIResource(0x${toHex})"
+    return "new ColorUIResource(0x$toHex)"
   }
-
 }

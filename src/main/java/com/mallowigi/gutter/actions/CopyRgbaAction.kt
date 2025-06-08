@@ -32,5 +32,4 @@ import java.awt.Color
 
 class CopyRgbaAction(override val color: Color?) : CopyColorAction(ColorHighlighterBundle.message("actions.copyRgba"), color) {
   override fun colorFormat(newColor: Color): String = ColorUtils.toRGBA(newColor)
-
 }

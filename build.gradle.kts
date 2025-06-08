@@ -153,7 +153,9 @@ intellijPlatform {
 
   publishing {
     token = environment("PUBLISH_TOKEN")
-    channels = listOf(pluginVersion.split('-').getOrElse(1) { "default" }.split('.').first())
+    channels = listOf(
+      pluginVersion.split('-').getOrElse(1) { "default" }.split('.').first()
+    )
   }
 
   signing {
@@ -161,7 +163,6 @@ intellijPlatform {
     privateKey = environment("PRIVATE_KEY")
     password = environment("PRIVATE_KEY_PASSWORD")
   }
-
 }
 
 changelog {

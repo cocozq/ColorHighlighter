@@ -43,5 +43,4 @@ interface SettingsFormUI<
   fun isModified(config: Config): Boolean
 
   fun setFormState(config: Config)
-
 }

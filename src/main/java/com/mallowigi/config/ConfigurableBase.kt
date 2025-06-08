@@ -139,11 +139,13 @@ abstract class ConfigurableBase<
   @Synchronized
   private fun initComponent() {
     if (form == null) {
-      form = UIUtil.invokeAndWaitIfNeeded(Computable {
-        val form = createForm()
-        form.init()
-        form
-      })
+      form = UIUtil.invokeAndWaitIfNeeded(
+        Computable {
+          val form = createForm()
+          form.init()
+          form
+        }
+      )
     }
   }
 }

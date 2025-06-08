@@ -25,7 +25,6 @@
  */
 package com.mallowigi.colors
 
-import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.components.service
 import com.thoughtworks.xstream.XStream
@@ -146,5 +145,4 @@ class PredefinedColors {
     @JvmStatic
     val instance: PredefinedColors by lazy { service() }
   }
-
 }

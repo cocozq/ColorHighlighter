@@ -27,7 +27,6 @@ package com.mallowigi.inlay
 
 import com.intellij.codeInsight.hints.InlayHintsCollector
 import com.intellij.openapi.editor.Editor
-import com.mallowigi.visitors.PythonVisitor
 import com.mallowigi.visitors.RVisitor
 
 class RInlineInlayProvider : ColorInlineInlayProvider() {
