@@ -52,11 +52,18 @@ class TextVisitor : ColorVisitor() {
   override fun shouldVisit(): Boolean = config.isTextEnabled
 
   private fun splitText(text: String) {
-    val blocks = text.split(Regex("\\b"))
+    // Split by whitespace only to preserve color codes
+    val tokens = text.split(Regex("\\s+"))
     var cursor = 0
-    blocks.forEach { block ->
-      visitElement(Pair(IntRange(cursor, cursor + block.length), block))
-      cursor += block.length
+    
+    tokens.forEach { token ->
+      if (token.isNotEmpty()) {
+        val tokenStart = text.indexOf(token, cursor)
+        if (tokenStart >= 0) {
+          visitElement(Pair(IntRange(tokenStart, tokenStart + token.length - 1), token))
+          cursor = tokenStart + token.length
+        }
+      }
     }
   }
 

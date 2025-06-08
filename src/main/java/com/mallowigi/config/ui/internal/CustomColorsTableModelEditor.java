@@ -242,12 +242,14 @@ public final class CustomColorsTableModelEditor<T> extends CollectionModelEditor
             event.getComponent(),
             "Choose Color",
             modelColor,
-            false,
+            true,  // Enable opacity/alpha support
             List.of(
                 new ColorPickerListener() {
                   @Override
                   public void colorChanged(final Color color) {
-                    ((SingleColor) model.items.get(row)).setCode(ColorUtil.toHex(color));
+                    // Use ColorUtil.toHex with alpha support
+                    String hexColor = ColorUtil.toHex(color, true);
+                    ((SingleColor) model.items.get(row)).setCode(hexColor);
                   }
 
                   @Override

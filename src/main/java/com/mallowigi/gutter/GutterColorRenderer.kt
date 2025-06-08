@@ -91,7 +91,7 @@ class GutterColorRenderer(private val color: Color?) : GutterIconRenderer() {
           editor.component,
           message("replace.color"),
           currentColor,
-          false
+          true  // Enable opacity/alpha support
         )
         copyColor(currentColor, newColor)
       }
@@ -99,7 +99,13 @@ class GutterColorRenderer(private val color: Color?) : GutterIconRenderer() {
       private fun copyColor(currentColor: Color, newColor: Color?) {
         if (newColor == null || newColor == currentColor) return
 
-        CopyPasteManager.getInstance().setContents(StringSelection(ColorUtil.toHex(newColor, false)))
+        // Include alpha channel in the copied hex color
+        val hexColor = if (newColor.alpha < 255) {
+          ColorUtil.toHex(newColor, true)  // Include alpha if not fully opaque
+        } else {
+          ColorUtil.toHex(newColor, false) // Standard RGB format for fully opaque colors
+        }
+        CopyPasteManager.getInstance().setContents(StringSelection(hexColor))
       }
     }
   }
