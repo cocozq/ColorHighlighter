@@ -76,15 +76,17 @@ val depsSvelteVersion: String = properties("depsSvelteVersion")
 
 // Configure project's dependencies
 repositories {
-  mavenCentral()
-  mavenLocal()
-  gradlePluginPortal()
+        mavenCentral()
+        mavenLocal()
+        gradlePluginPortal()
+        maven("https://plugins.gradle.org/m2/")
+        google()
 
-  intellijPlatform {
-    defaultRepositories()
-    jetbrainsRuntime()
-  }
-}
+        intellijPlatform {
+            defaultRepositories()
+            jetbrainsRuntime()
+        }
+    }
 
 dependencies {
   detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.23.6")
